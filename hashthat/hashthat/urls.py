@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.get_home_page, name='homepage'),
     path('hash/<str:haash>/', views.get_hash_details, name='gethashdetails'),
+    path('quickhash/', views.quickHash, name='quickhash'),
 ]

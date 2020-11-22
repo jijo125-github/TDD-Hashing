@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from hashing import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.get_home_page, name='homepage'),
+    path('hash/<str:haash>/', views.get_hash_details, name='gethashdetails'),
 ]
